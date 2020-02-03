@@ -1,4 +1,6 @@
 class Currency < ApplicationRecord
-  validates :name, uniqueness: true, presence: true
-  validates :rate, numericality: { greater_than: 0 }, presence: true
+  validates :code, uniqueness: true, presence: true
+  validates :name, presence: true
+  validates :rate, presence: true
+  validates :nominal, presence: true
 end

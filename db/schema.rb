@@ -17,10 +17,12 @@ ActiveRecord::Schema.define(version: 2020_02_01_043753) do
 
   create_table "currencies", force: :cascade do |t|
     t.string "name"
-    t.decimal "rate"
+    t.string "code"
+    t.string "rate"
+    t.string "nominal"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["name"], name: "index_currencies_on_name", unique: true
+    t.index ["code"], name: "index_currencies_on_code", unique: true
   end
 
 end

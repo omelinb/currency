@@ -10,7 +10,7 @@ class Api::V1::CurrenciesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
 
     json_response = JSON.parse(response.body)
-    assert_equal @currency.name, json_response['name']
+    assert_equal @currency.code, json_response['code']
   end
 
   test 'should show currencies' do
